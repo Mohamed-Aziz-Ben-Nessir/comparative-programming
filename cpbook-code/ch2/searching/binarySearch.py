@@ -1,15 +1,11 @@
-def binarySearch(l,val):
-    i=len(l)//2
-    if l[i]==val:
-        return i
-    if l[len(l)-1] < val :
-        return -1 
-    if(l[i]>val):
-        return binarySearch(l[:i],val)
-    return binarySearch(l[i:],val)
+def binarySearch(arr,left,right,val): 
+    if right>= left: 
+        mid = left+(right-left)//2
+        if arr[mid]>x:
+            return binarySearch(arr,left,mid-1,val)
+        elif arr[mid]<x :
+            return binarySearch(arr,mid+1,right,val)
+        return mid 
+    return -1
 
-l=[i for i in range(11)]
-l.sort()
-n=int(input())
-print(binarySearch(l,n))
 
